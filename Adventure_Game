@@ -1,5 +1,7 @@
 # Adventure Game
 # start
+print("Created by Tanel4Wins")
+print("Version 1.0")
 answer = input("Do you want to play?\nYES/NO?: ")
 
 if answer.lower().strip() == "yes":
