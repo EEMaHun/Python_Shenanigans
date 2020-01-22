@@ -1,0 +1,146 @@
+# Adventure Game
+# start
+answer = input("Do you want to play?\nYES/NO?: ")
+
+if answer.lower().strip() == "yes":
+	print("\nYou wake up in a cave. You find 2 paths.")
+	
+	answer = input("Do you choose 'left' or 'right'?: ")
+
+	if answer.lower().strip() == "left":
+		print("\nYou see a light and find a gang of bandits.")
+
+		answer = input("Do you 'sneak' by them or do you 'fight'?: ")
+
+		if answer.lower().strip() == "sneak":
+			print("\nYou snuck past the bandits unheared.")
+
+			answer = input("Do you 'go deeper' into the cave or attempt to 'exit' the cave?: ")
+
+			if answer.lower().strip() == "exit":
+				print("\nThis time you get caught by the bandits.\nGAME OVER")
+
+			elif answer.lower().strip() == "go deeper":
+				print("\nYou find yourself in a very dark area")
+
+				answer = input("You find a torch. Do you light it?\nYes? No?: ")
+
+				if answer.lower().strip() == "yes":
+					print("\nYou light the torch and find the bandits stolen gold.\n YOU WIN!")
+
+				elif answer.lower().strip() == "no":
+					print("\nYou trip and fall on some tiny round metal objects.\nGAME OVER")
+
+				else:
+					print("Invalid Choice")
+
+			else:
+				print("Invalid Choice")
+
+		if answer.lower().strip() == "fight":
+			print("\nYou are overwhelmed with the bandits and end up dead.\nGAME OVER")	
+
+		else:
+			print("Invalid Choice")
+
+	elif answer.lower().strip() == "right":
+		print("\nYou exit the cave.\nIn the distance you see a 'castle' and a 'cottage'.")
+
+		answer = input("Do you go to the castle or cottage?: ")
+
+		if answer.lower().strip() == "cottage":
+			print("\nYou walk up to the cottage. It seems empty.")
+			
+			answer = input("Do you enter?: ")
+
+			if answer.lower().strip() == "yes":
+				print("\nThere is an old man living inside.")
+
+				answer = input("Do you 'kill' him or 'leave'?: ")
+
+				if answer.lower().strip() == "kill":
+					print("\nYou kill the old man and take his cottage\nNow you have a nice place to live\nYOU WIN!")
+
+				elif answer.lower().strip() == "leave":
+					print("\nWhen you leave, the old man stabs you with his shortsword.\n GAME OVER")
+
+			elif answer.lower().strip() == "no":
+				print("\nYou make your way to the castle.")
+				print("You are at the castle gates.")
+
+				answer = input("Do you 'enter'?\nYes? No?: ")
+
+				if answer.lower().strip() == "no":
+					print("\nYou stay outside the castle walls and eventually starve.\nGAME OVER")
+
+				elif answer.lower().strip() == "yes":
+					print("\nWhen you enter the guards confront you")
+
+					answer = input("Do you 'comply' or 'refuse'?: ")
+
+					if answer.lower().strip() == "comply":
+						print("\nThe guards bring to their king.")
+
+						answer = input("Do you 'report' the bandits to the kind or 'lie' about it?: ")
+
+						if answer.lower().strip() == "report":
+							print("\nThe king sends his men to arrest the bandits.\nAs a reward you get some gold and a nice cottage.\nYOU WIN!")
+
+						elif answer.lower().strip() == "lie":
+							print("\nWhen you finish lying, a farmer reports the bandits instead.\nYou are thrown in jail for treason.\nGAME OVER")
+
+					elif answer.lower().strip() == "refuse":
+						print("\nYou try to refuse the guards, but end up getting killed.\nGAME OVER")
+
+		elif answer.lower().strip() == "castle":
+			print("\nYou are at the castle gates.")
+
+			answer = input("Do you enter?\nYes? No?: ")
+
+			if answer.lower().strip() == "yes":
+				print("\nWhen you enter the guards confront you")
+
+				answer = input("Do you 'comply' or 'refuse'?: ")
+
+				if answer.lower().strip() == "comply":
+					print("\nThe guards bring to their king.")
+
+					answer = input("Do you 'report' the bandits to the kind or 'lie' about it?: ")
+
+					if answer.lower().strip() == "report":
+						print("\nThe king sends his men to arrest the bandits.\nAs a reward you get some gold and a nice cottage.\nYOU WIN!")
+
+					elif answer.lower().strip() == "lie":
+						print("\nWhen you finish lying, a farmer reports the bandits instead.\nYou are thrown in jail for treason.\nGAME OVER")
+				elif answer.lower().strip() == "refuse":
+					print("\nYou refuse the guards and are thrown in jail.\nGAME OVER")
+
+				else:
+					print("Invalid Choice")
+			elif answer.lower().strip() == "no":
+				print("\nYou make your way to the cottage. It seems empty.")
+			
+				answer = input("Do you enter?\nYes? No?: ")
+
+				if answer.lower().strip() == "yes":
+					print("\nThere is an old man living inside.")
+
+					answer = input("Do you 'kill' him or 'leave'?: ")
+
+					if answer.lower().strip() == "kill":
+						print("\nYou kill the old man and take his cottage\nNow you have a nice place to live\nYOU WIN!")
+
+					elif answer.lower().strip() == "leave":
+						print("\nWhen you leave, the old man stabs you with his shortsword.\nGAME OVER")
+
+				elif answer.lower().strip() == "no":
+					print("You stay outside of the cottage and eventually freeze.\nGAME OVER")
+
+			else:
+				print("Invalid Choice")
+	else:
+		print("Invalid Choice")
+
+else:
+	print("Too bad :(")
+# end
